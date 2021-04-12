@@ -6,7 +6,14 @@ interface Props {
 
 export function Header({ btnBack }: Props) {
   return (
-    <Flex maxW="1440px" h="100px" align="center" justify="center" position="relative">
+    <Flex
+      maxW="1440px"
+      h="100px"
+      margin="0 auto"
+      align="center"
+      justify="center"
+      position="relative"
+    >
       {btnBack && (
         <Image
           src="/icons/arrowLeft.svg"
