@@ -3,7 +3,7 @@ import { Box, Flex, Image, Text } from '@chakra-ui/react'
 export function Banner() {
   return (
     <Flex
-      h="335px"
+      h={["163px", "335px"]}
       mb="32px"
       px="4"
       justify="center"
@@ -18,18 +18,24 @@ export function Banner() {
         position="relative"
         objectFit="cover"
       >
-        <Box>
-          <Text fontWeight="500" fontSize="4xl" lineHeight="50px" color="custom.text">
+        <Box maxW={["100%", "100%", "524px"]}>
+          <Text fontWeight="500" fontSize={["xl", "4xl"]} lineHeight={["30px", "50px"]} color="custom.text">
             5 Continentes, <br />
             infinitas possibilidades.
           </Text>
 
-          <Text maxW="524px" fontSize="large" mt="5" color="custom.info">
+          <Text fontSize={["0.8rem", "xl"]} mt={["1", "5"]} color="custom.info">
             Chegou a hora de tirar do papel a viagem que você sempre sonhou.
           </Text>
         </Box>
 
-        <Image src="/images/airplane.svg" alt="Airplane" mt="100px" transform="rotate(3deg)" />
+        <Image
+          display={['none', 'none', 'block']}
+          src="/images/airplane.svg"
+          alt="Airplane"
+          mt="100px"
+          transform="rotate(3deg)"
+        />
       </Flex>
     </Flex>
   )
