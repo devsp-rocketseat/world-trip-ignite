@@ -1,48 +1,51 @@
-import { Box, Divider, Flex, Image, Text } from '@chakra-ui/react'
+import { Box, Divider, Flex, Grid, GridItem, Text } from '@chakra-ui/react'
+
+import { ItemInfo } from './ItemInfo'
 
 export function SectionInfo() {
   return (
     <Box>
-      <Flex maxW="1192px" m="0 auto" p="5rem 1rem" align="center" justify="space-between">
-        <Flex direction="column" align="center">
-          <Image src="/icons/cocktail.svg" alt="cocktail" />
-          <Text fontSize="xl" mt="6" color="custom.text_dark" fontWeight="semibold">
-            vida noturna
-          </Text>
-        </Flex>
+      <Grid
+        templateColumns={["1fr 1fr", "1fr 1fr", "1fr 1fr", "repeat(5, 1fr)"]}
+        w="100%"
+        justify="space-between"
+        align="center"
+        py={["10", "20"]}
+        mx="auto"
+        maxW="1160px"
+        flexWrap="wrap"
+        gap={[1, 5]}
+      >
+        <GridItem>
+          <ItemInfo image="/icons/cocktail.svg" text="vida noturna" />
+        </GridItem>
 
-        <Flex direction="column" align="center">
-          <Image src="/icons/surf.svg" alt="surf" />
-          <Text fontSize="xl" mt="6" color="custom.text_dark" fontWeight="semibold">
-            praia
-          </Text>
-        </Flex>
+        <GridItem>
+          <ItemInfo image="/icons/surf.svg" text="praia" />
+        </GridItem>
 
-        <Flex direction="column" align="center">
-          <Image src="/icons/building.svg" alt="building" />
-          <Text fontSize="xl" mt="6" color="custom.text_dark" fontWeight="semibold">
-            moderno
-          </Text>
-        </Flex>
+        <GridItem>
+          <ItemInfo image="/icons/building.svg" text="moderno" />
+        </GridItem>
 
-        <Flex direction="column" align="center">
-          <Image src="/icons/museum.svg" alt="museum" />
-          <Text fontSize="xl" mt="6" color="custom.text_dark" fontWeight="semibold">
-            clássico
-          </Text>
-        </Flex>
+        <GridItem>
+          <ItemInfo image="/icons/museum.svg" text="clássico" />
+        </GridItem>
 
-        <Flex direction="column" align="center">
-          <Image src="/icons/earth.svg" alt="earth" />
-          <Text fontSize="xl" mt="6" color="custom.text_dark" fontWeight="semibold">
-            e mais...
-          </Text>
-        </Flex>
-      </Flex>
+        <GridItem colSpan={[2, 2, 2, 1]}>
+          <ItemInfo image="/icons/earth.svg" text="e mais..." />
+        </GridItem>
+      </Grid>
 
       <Divider borderColor="#47585B" border="2px solid #47585B" size="10" w="100px" mx="auto" />
 
-      <Text fontSize="3xl" fontWeight="medium" my="3.25rem" textAlign="center" color="custom.text_dark">
+      <Text
+        fontSize={["lg", "3xl", "4xl"]}
+        fontWeight="medium"
+        my={["8", "14", "14"]}
+        textAlign="center"
+        color="custom.text_dark"
+      >
         Vamos nessa? <br />
         Então escolha seu continente
       </Text>

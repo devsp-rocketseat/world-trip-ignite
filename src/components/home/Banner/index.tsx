@@ -4,7 +4,7 @@ export function Banner() {
   return (
     <Flex
       h={["163px", "335px"]}
-      mb="32px"
+      mb={["0", "0", "32px"]}
       px="4"
       justify="center"
       bg="url(/images/imgBackground.jpg) no-repeat 50% 30%"
